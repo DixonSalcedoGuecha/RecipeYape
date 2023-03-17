@@ -11,8 +11,6 @@ K
 infrastructure/build.gradle,d\0\d08ad7275ca05d13cb570f6f624eee8075619a60
 
 Opresentation/src/main/java/com/example/ricipeyape/view/adapter/RecipeAdapter.kt,1\e\1eb2d2b03d1a643d0b024648de6b8142a8c8a4f2
-~
-Npresentation/src/main/java/com/example/ricipeyape/viewmodel/RecipeViewModel.kt,e\9\e9ee0eefca9eaada981801c7fb001e34eb232d4d
 ê
 `infrastructure/src/main/java/com/example/infrastructure/usescases/GetUsersNotConnectedUseCase.kt,5\6\5606851a4008c9c58dd7dfdb5c4319e979ed7860
 É

@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RecipeViewModel @Inject constructor(
     var getRecipesUseCase: GetRecipesUseCase,
-   var getRecipeNotConnectedUseCase: GetUsersNotConnectedUseCase
+    var getRecipeNotConnectedUseCase: GetUsersNotConnectedUseCase
 ) : ViewModel() {
 
     val recipeList = MutableLiveData<List<RecipeItem>>()

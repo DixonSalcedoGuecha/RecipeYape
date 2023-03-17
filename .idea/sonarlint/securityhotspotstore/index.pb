@@ -15,8 +15,6 @@ Opresentation/src/main/java/com/example/ricipeyape/view/adapter/RecipeAdapter.kt
 Qinfrastructure/src/main/java/com/example/infrastructure/data/model/AmountItems.kt,8\e\8ef0d70950a508de574c80634d320682e8dd9aa9
 Ñ
 Tinfrastructure/src/main/java/com/example/infrastructure/data/model/RecipeResponse.kt,7\0\7072e91509a4c038dc9fd628855805fca79c2900
-~
-Npresentation/src/main/java/com/example/ricipeyape/viewmodel/RecipeViewModel.kt,e\9\e9ee0eefca9eaada981801c7fb001e34eb232d4d
 ê
 `infrastructure/src/main/java/com/example/infrastructure/usescases/GetUsersNotConnectedUseCase.kt,5\6\5606851a4008c9c58dd7dfdb5c4319e979ed7860
 É
