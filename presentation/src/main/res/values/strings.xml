@@ -2,5 +2,7 @@
     <string name="app_name">RicipeYape</string>
     <string name="hint_search_recipe">search recipe</string>
     <string name="hint_name_recipe">Name Recipe</string>
+    <string name="hint_name_ingredients">Name of the ingredients for the recipe</string>
     <string name="string_hint_descriptions">Descripcion</string>
+    <string name="image_of_recipe">image of recipe</string>
 </resources>

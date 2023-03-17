@@ -1,15 +1,16 @@
 package com.example.ricipeyape.view
 
+import android.content.Intent
 import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.domain.model.RecipeItem
+import com.example.domain.utils.Constants.KEY_SEND_OBJECT
 import com.example.ricipeyape.view.adapter.RecipeAdapter
 import com.example.ricipeyape.databinding.ActivityRecipeBinding
 import com.example.ricipeyape.viewmodel.RecipeViewModel
@@ -19,7 +20,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class RecipeActivity : AppCompatActivity() {
     private lateinit var  binding: ActivityRecipeBinding
     private lateinit var adapter: RecipeAdapter
-    private val usersViewModel: RecipeViewModel by viewModels()
+    private val recipeViewModel: RecipeViewModel by viewModels()
     private var listRecipe = emptyList<RecipeItem>()
 
 
@@ -56,12 +57,12 @@ class RecipeActivity : AppCompatActivity() {
     }
 
     private fun initViewModels() {
-        usersViewModel.onCreate()
-        usersViewModel.recipeList.observe(this, Observer {
+        recipeViewModel.onCreate()
+        recipeViewModel.recipeList.observe(this, Observer {
             listRecipe = it
             initRecyclerView()
         })
-        usersViewModel.isLoading.observe(this, Observer {
+        recipeViewModel.isLoading.observe(this, Observer {
             binding.progress.isVisible = it
         })
     }
@@ -73,8 +74,12 @@ class RecipeActivity : AppCompatActivity() {
         binding.rcvRecipe.layoutManager = LinearLayoutManager(this)
         binding.rcvRecipe.adapter = adapter
     }
-    private fun onItemSelected(RecipeItem: RecipeItem) {
-        Toast.makeText(baseContext, RecipeItem.name, Toast.LENGTH_SHORT).show()
+    private fun onItemSelected(recipeItem: RecipeItem) {
+        val intent = Intent(this, DetailRecipeActivity::class.java)
+        val bundle = Bundle()
+        bundle.putSerializable(KEY_SEND_OBJECT, recipeItem)
+        intent.putExtras(bundle)
+        startActivity(intent)
 
     }
 

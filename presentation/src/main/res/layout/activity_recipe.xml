@@ -8,7 +8,7 @@
     tools:context=".view.RecipeActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_layout_email"
+        android:id="@+id/text_input_layout_recipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_8dp"

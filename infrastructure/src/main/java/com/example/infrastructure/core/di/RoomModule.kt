@@ -25,5 +25,11 @@ object RoomModule {
     @Provides
     fun provideRecipeDao(db: YapeDataBase) = db.getRecipeDao()
 
+    @Singleton
+    @Provides
+    fun provideIngredientRecipeDao(db: YapeDataBase) = db.getIngredientRecipeDao()
 
+    @Singleton
+    @Provides
+    fun provideSummaryRecipeDao(db: YapeDataBase) = db.getSummaryRecipeDao()
 }

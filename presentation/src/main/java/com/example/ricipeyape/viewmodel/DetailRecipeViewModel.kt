@@ -3,9 +3,12 @@ package com.example.ricipeyape.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.domain.model.IngredientsItems
 import com.example.domain.model.RecipeItem
 import com.example.infrastructure.data.database.entities.toDataBase
+import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
 import com.example.infrastructure.usescases.GetRecipesUseCase
+import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
 import com.example.infrastructure.usescases.GetUsersNotConnectedUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,18 +17,19 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailRecipeViewModel @Inject constructor(
-    var get: GetRecipesUseCase,
-   var getRecipeNotConnectedUseCase: GetUsersNotConnectedUseCase
+    var getDetailsRecipesUseCase: GetDetailsRecipesUseCase,
+    var getSummaryRecipesUseCase: GetSummaryRecipesUseCase
 ) : ViewModel() {
 
-    val recipeList = MutableLiveData<List<RecipeItem>>()
+    val recipeList = MutableLiveData<List<IngredientsItems>>()
     val isLoading = MutableLiveData<Boolean>()
+    val summaryRecipe = MutableLiveData<String>()
 
 
-    fun onCreate(){
+    fun onCreate(id: Int){
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getRecipesUseCase()
+            val result = getDetailsRecipesUseCase(id)
             if (result.isNotEmpty()){
                 recipeList.postValue(result)
                 isLoading.postValue(false)
@@ -37,15 +41,15 @@ class DetailRecipeViewModel @Inject constructor(
 
     }
 
-    fun withoutConnection(){
+    fun onSummerDetail(id: Int){
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getRecipeNotConnectedUseCase()
+            val result = getSummaryRecipesUseCase(id)
             if (result.isNotEmpty()){
-                //recipeList.postValue(result.map { it })
+                summaryRecipe.postValue(result.first().summary)
                 isLoading.postValue(false)
             } else {
-                recipeList.postValue(emptyList())
+                summaryRecipe.postValue("")
                 isLoading.postValue(false)
             }
         }

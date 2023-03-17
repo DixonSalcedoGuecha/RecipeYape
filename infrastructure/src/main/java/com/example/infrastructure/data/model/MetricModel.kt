@@ -1,6 +1,6 @@
 package com.example.infrastructure.data.model
 
 data class MetricModel(
-    val value : Int,
-    val unit: String
+    val value : String? = "",
+    val unit: String? = ""
 )

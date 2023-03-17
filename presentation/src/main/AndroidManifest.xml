@@ -16,7 +16,7 @@
         android:theme="@style/Theme.RicipeYape"
         tools:targetApi="31">
         <activity
-            android:name=".DetailRecipeActivity"
+            android:name=".view.DetailRecipeActivity"
             android:exported="false" />
         <activity
             android:name=".view.RecipeActivity"

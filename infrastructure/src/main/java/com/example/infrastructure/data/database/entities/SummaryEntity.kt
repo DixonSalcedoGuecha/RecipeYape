@@ -4,13 +4,14 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.domain.model.IngredientsItems
+import com.example.domain.model.SummaryItems
 
-@Entity(tableName = "ingredients_table")
-data class IngredientsEntity(
+@Entity(tableName = "summary_table")
+data class SummaryEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "idKey") val idKey: Int = 0,
     @ColumnInfo(name = "id") val id: Int,
-    @ColumnInfo(name = "name") val name: String,
-    @ColumnInfo(name = "amount") val amount: String)
+    @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name = "summary") val summary: String)
 
-fun IngredientsItems.toDataBase() = IngredientsEntity(id = id, name = name, amount = amount)
+fun SummaryItems.toDataBase() = SummaryEntity(id = id, title = title, summary = summary)

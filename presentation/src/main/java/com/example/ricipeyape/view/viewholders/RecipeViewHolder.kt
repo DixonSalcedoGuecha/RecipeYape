@@ -11,7 +11,7 @@ class RecipeViewHolder ( view: View): RecyclerView.ViewHolder(view) {
 
     fun render (recipeItem: RecipeItem, onClickListener: (RecipeItem) -> Unit){
         with(binding){
-            nameUser.text = recipeItem.name
+            nameRecipe.text = recipeItem.name
            Glide.with(binding.root.context).load(recipeItem.image).into(imgRecipe)
 
             itemView.setOnClickListener { onClickListener(recipeItem) }
