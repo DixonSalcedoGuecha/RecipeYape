@@ -3,6 +3,7 @@ package com.example.ricipeyape.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.domain.model.IngredientsItems
 import com.example.domain.model.RecipeItem
+import com.example.domain.model.SummaryItems
 import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
 import com.example.infrastructure.usescases.GetRecipesUseCase
 import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
@@ -70,6 +71,27 @@ class DetailRecipeViewModelTest{
 
             //Then
             assert(detailRecipeViewModel.recipeList.value == ingredientList.map { it })
+        }
+
+    @Test
+    fun `when view model is created for see detail the a recipe and load the summary`() =
+        runTest {
+            //Given
+            val summary = listOf(
+                SummaryItems(
+                    1,
+                    "Cannellini Bean and Asparagus Salad with Mushrooms",
+                    "Cannellini Bean and Asparagus Salad with Mushrooms requires approximately <b>45 minutes"
+                )
+            )
+
+            coEvery { getSummaryRecipesUseCase(1) } returns summary
+
+            //When
+            detailRecipeViewModel.onSummerDetail(1)
+
+            //Then
+            assert(detailRecipeViewModel.summaryRecipe.value == summary.first().summary)
         }
 
 }
