@@ -11,8 +11,6 @@ K
 infrastructure/build.gradle,d\0\d08ad7275ca05d13cb570f6f624eee8075619a60
 
 Opresentation/src/main/java/com/example/ricipeyape/view/adapter/RecipeAdapter.kt,1\e\1eb2d2b03d1a643d0b024648de6b8142a8c8a4f2
-I
-presentation/build.gradle,2\9\29ca4091f3fd866a7d8488b04776c5994c7983b9
 ~
 Npresentation/src/main/java/com/example/ricipeyape/viewmodel/RecipeViewModel.kt,e\9\e9ee0eefca9eaada981801c7fb001e34eb232d4d
 ê
@@ -21,8 +19,6 @@ Npresentation/src/main/java/com/example/ricipeyape/viewmodel/RecipeViewModel.kt
 Sinfrastructure/src/main/java/com/example/infrastructure/data/model/ItemsResponse.kt,2\5\258d418cccc745a07a34a2ddbb8d4410859775ff
 ë
 apresentation/src/main/java/com/example/ricipeyape/view/viewholders/IngredientsRecipeViewHolder.kt,2\3\238c163a34f0aba747d6de8c49277dbbe743b5b7
-j
-:domain/src/main/java/com/example/domain/utils/Constants.kt,e\1\e1896bea7391dfb9dd07ad50d84aab6bcfb54fad
 â
 Ypresentation/src/main/java/com/example/ricipeyape/view/adapter/IngredientRecipeAdapter.kt,8\6\869661b621eb1c8a5389bd22204a27a93311f7a9
 Ü

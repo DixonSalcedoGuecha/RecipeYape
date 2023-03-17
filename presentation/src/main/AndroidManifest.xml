@@ -16,8 +16,17 @@
         android:theme="@style/Theme.RicipeYape"
         tools:targetApi="31">
         <activity
-            android:name=".view.DetailRecipeActivity"
+            android:name=".view.MapsRecipeActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".view.DetailRecipeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".view.RecipeActivity"
             android:exported="true">

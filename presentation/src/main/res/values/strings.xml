@@ -5,4 +5,5 @@
     <string name="hint_name_ingredients">Name of the ingredients for the recipe</string>
     <string name="string_hint_descriptions">Descripcion</string>
     <string name="image_of_recipe">image of recipe</string>
+    <string name="description">Description</string>
 </resources>
