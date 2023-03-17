@@ -51,7 +51,7 @@ Las librerias cumplen con el proposito de solucionar problemas que a menudo se e
 
 ## Consideraciones adicionales
 
-El repositorio es publico, por lo cual no hay necesidad de manejar credenciales adicionales ni solicitar permisos al dueño del repositorio @felipevelasquez08 para poder acceder a su contenido.
+El repositorio es publico, por lo cual no hay necesidad de manejar credenciales adicionales ni solicitar permisos al dueño del repositorio DixonSalcedoGuecha para poder acceder a su contenido.
 
 En este proyecto se utilizan los servicios gratuitos de la pagina  (https://spoonacular.com/food-api) en la cual encontramos una documentacion (https://spoonacular.com/food-api/docs#Summarize-Recipe) con muchas servicios para este tipo de pruebas.
 
