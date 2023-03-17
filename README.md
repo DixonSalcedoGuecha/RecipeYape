@@ -5,7 +5,7 @@ Este proyecto es una solución para el reto tecnico propuesto por Yape.
 
 Se crea un proyecto de Android utilizando DataBinding, al terminar la creación para continuar con el proceso se aplica clean architecture y MVVM, esto con la finalidad de poder desacoplar la lógica de negocio de la vista y la infraestructura, además de garantizar que se genera un código limpio, estructurado y legible.
 
-Este proyecto también cuenta con pruebas unitarias basadas en resolver la lógica de negocio (Mockk) y para la parta de UI (Expresso) , en su interior encontramos patrones de diseño y buenas practicas de desarrollo.
+Este proyecto también cuenta con pruebas unitarias basadas en resolver la lógica de negocio (Mockk) y para la parta de UI (Expresso).
 
 Por ultimo, en este proyecto se utilzaron buenas parcticas y algunos patrones de diseño segun la necesidad.
 
