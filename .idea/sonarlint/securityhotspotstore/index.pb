@@ -7,8 +7,6 @@ C
 domain/build.gradle,a\3\a3021bb5ba623a461b5fdb89ae51923a4945c354
 ~
 Ninfrastructure/src/main/java/com/example/infrastructure/core/RetrofitHelper.kt,0\e\0ee88cbe9b795c35ba198e6a286d74e5b3293d67
-K
-infrastructure/build.gradle,d\0\d08ad7275ca05d13cb570f6f624eee8075619a60
 
 Opresentation/src/main/java/com/example/ricipeyape/view/adapter/RecipeAdapter.kt,1\e\1eb2d2b03d1a643d0b024648de6b8142a8c8a4f2
 Å
