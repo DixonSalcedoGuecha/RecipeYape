@@ -4,9 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.RecipeItem
-import com.example.infrastructure.data.database.entities.toDataBase
 import com.example.infrastructure.usescases.GetRecipesUseCase
-import com.example.infrastructure.usescases.GetUsersNotConnectedUseCase
+import com.example.infrastructure.usescases.GetRecipeNotConnectedUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -15,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class RecipeViewModel @Inject constructor(
     var getRecipesUseCase: GetRecipesUseCase,
-    var getRecipeNotConnectedUseCase: GetUsersNotConnectedUseCase
+    var getRecipeNotConnectedUseCase: GetRecipeNotConnectedUseCase
 ) : ViewModel() {
 
     val recipeList = MutableLiveData<List<RecipeItem>>()

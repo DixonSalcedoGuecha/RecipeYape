@@ -2,12 +2,9 @@ package com.example.ricipeyape.viewmodel
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.domain.model.IngredientsItems
-import com.example.domain.model.RecipeItem
 import com.example.domain.model.SummaryItems
 import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
-import com.example.infrastructure.usescases.GetRecipesUseCase
 import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
-import com.example.infrastructure.usescases.GetUsersNotConnectedUseCase
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK

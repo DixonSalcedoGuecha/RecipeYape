@@ -3,7 +3,7 @@ package com.example.ricipeyape.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.domain.model.RecipeItem
 import com.example.infrastructure.usescases.GetRecipesUseCase
-import com.example.infrastructure.usescases.GetUsersNotConnectedUseCase
+import com.example.infrastructure.usescases.GetRecipeNotConnectedUseCase
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK
@@ -23,7 +23,7 @@ internal class RecipeViewModelTest {
     private lateinit var getRecipesUseCase: GetRecipesUseCase
 
     @RelaxedMockK
-    private lateinit var getRecipeNotConnectedUseCase: GetUsersNotConnectedUseCase
+    private lateinit var getRecipeNotConnectedUseCase: GetRecipeNotConnectedUseCase
 
     private lateinit var recipeViewModel: RecipeViewModel
 

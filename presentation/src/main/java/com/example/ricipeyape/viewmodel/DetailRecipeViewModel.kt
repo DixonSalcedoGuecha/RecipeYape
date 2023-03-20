@@ -4,12 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.IngredientsItems
-import com.example.domain.model.RecipeItem
-import com.example.infrastructure.data.database.entities.toDataBase
 import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
-import com.example.infrastructure.usescases.GetRecipesUseCase
 import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
-import com.example.infrastructure.usescases.GetUsersNotConnectedUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

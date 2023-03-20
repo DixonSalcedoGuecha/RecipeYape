@@ -33,11 +33,11 @@ class RecipeActivity : AppCompatActivity() {
 
         binding.searchRecipe.addTextChangedListener { nameRecipe ->
             if (connectedValidate()) {
-                val usersFiltered = listRecipe.filter { userFilter ->
-                    userFilter.name.lowercase().contains(nameRecipe.toString().lowercase())
+                val recipeFiltered = listRecipe.filter { recipeFilter ->
+                    recipeFilter.name.lowercase().contains(nameRecipe.toString().lowercase())
                 }
-                viewEmptyList(usersFiltered.isEmpty())
-                adapter.updateRecipe(usersFiltered)
+                viewEmptyList(recipeFiltered.isEmpty())
+                adapter.updateRecipe(recipeFiltered)
             }
         }
 

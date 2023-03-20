@@ -4,7 +4,7 @@ import com.example.domain.model.RecipeItem
 import com.example.infrastructure.repository.RecipeRepository
 import javax.inject.Inject
 
-class GetUsersNotConnectedUseCase @Inject constructor(
+class GetRecipeNotConnectedUseCase @Inject constructor(
     private val repository : RecipeRepository
 ) {
 
