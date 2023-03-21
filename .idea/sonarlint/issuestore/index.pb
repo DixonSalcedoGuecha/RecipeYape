@@ -47,8 +47,6 @@ u
 Einfrastructure/src/main/java/com/example/infrastructure/extensions.kt,e\a\ea45aac1284d408001c7ba06f1b2661d74d0c8c2
 Ö
 Uinfrastructure/src/main/java/com/example/infrastructure/data/database/YapeDataBase.kt,2\a\2afea74a3cecdca4b741532087f54f0eab0180e8
-ç
-]infrastructure/src/main/java/com/example/infrastructure/data/database/dao/SummaryRecipeDao.kt,a\0\a0f7f532b37338000514bdad4b1efabd65bd6796
 Ö
 Uinfrastructure/src/main/java/com/example/infrastructure/data/network/RecipeService.kt,f\6\f6bcc8cde4d138c0600aee4ebeb5756729c31dbf
 Å
@@ -57,12 +55,8 @@ Qinfrastructure/src/main/java/com/example/infrastructure/data/model/ApiResponse.
 Qinfrastructure/src/main/java/com/example/infrastructure/data/network/ApiClient.kt,3\2\3245c0fc6ca1878d091dd4ddad0746d7c20a0b78
 Ö
 Uinfrastructure/src/main/java/com/example/infrastructure/data/model/SummaryResponse.kt,f\e\fe3530d880e8dc4f4dfb60b05f34948cb35f4075
-ç
-]infrastructure/src/main/java/com/example/infrastructure/usescases/GetSummaryRecipesUseCase.kt,3\3\3380f92a5fdd6addc67310ea72f04d60a9f8a554
 å
 \infrastructure/src/main/java/com/example/infrastructure/data/network/SummaryRecipeService.kt,7\0\7049f798283d199b63f4af2b0488dae407d4d03b
-ç
-]infrastructure/src/main/java/com/example/infrastructure/repository/SummaryRecipeRepository.kt,c\7\c77a203aafaad03369e84aa559ebb05c83723021
 j
 :domain/src/main/java/com/example/domain/utils/Constants.kt,e\1\e1896bea7391dfb9dd07ad50d84aab6bcfb54fad
 Y

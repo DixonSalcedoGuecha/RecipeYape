@@ -1,6 +1,7 @@
 package com.example.ricipeyape.view
 
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -30,8 +31,8 @@ class DetailRecipeActivity : AppCompatActivity() {
     private var listIngredients = emptyList<IngredientsItems>()
     private var id: Int? = 0
     private var summary: String? = ""
-    lateinit var btnBack : ImageView
-    lateinit var btnMaps : ImageView
+    private lateinit var btnBack : ImageView
+    private lateinit var btnMaps : ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailRecipeBinding.inflate(layoutInflater)
@@ -50,7 +51,9 @@ class DetailRecipeActivity : AppCompatActivity() {
             Glide.with(binding.root.context).load(recipeItem?.image).into(binding.imgRecipe)
             id = recipeItem?.id
         }
-        initViewModels(id ?: 0)
+        if (connectedValidate()){
+            initViewModels(id ?: 0)
+        }
 
         initRecyclerView()
 
@@ -96,5 +99,11 @@ class DetailRecipeActivity : AppCompatActivity() {
         adapter = IngredientRecipeAdapter(listIngredients)
         binding.rcvIngredients.layoutManager = LinearLayoutManager(this)
         binding.rcvIngredients.adapter = adapter
+    }
+    private fun connectedValidate() : Boolean {
+        val cm = this.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork = cm.activeNetworkInfo
+        val isConnected: Boolean = activeNetwork?.isConnectedOrConnecting == true
+        return isConnected
     }
 }
