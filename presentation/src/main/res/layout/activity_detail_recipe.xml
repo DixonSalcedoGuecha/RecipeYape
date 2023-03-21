@@ -70,7 +70,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rcv_ingredients"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_70dp" />
+                android:layout_height="@dimen/dimen_250dp" />
 
             <ProgressBar
                 android:id="@+id/progress"
