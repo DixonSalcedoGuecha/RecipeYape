@@ -42,7 +42,7 @@ class MapsRecipeActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun createMarker() {
-        val coordinate = LatLng(5.761624379021569, -72.90653429911457)
+        val coordinate = LatLng(5.615939222114563, -73.81520482841151)
         val marker = MarkerOptions().position(coordinate).title(nameRecipe)
         map.addMarker(marker)
         map.animateCamera(
