@@ -41,7 +41,7 @@ class RecipeViewModel @Inject constructor(
             isLoading.postValue(true)
             val result = getRecipeNotConnectedUseCase()
             if (result.isNotEmpty()){
-                //recipeList.postValue(result.map { it })
+                recipeList.postValue(result.map { it })
                 isLoading.postValue(false)
             } else {
                 recipeList.postValue(emptyList())

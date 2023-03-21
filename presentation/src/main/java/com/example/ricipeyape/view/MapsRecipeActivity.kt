@@ -46,7 +46,7 @@ class MapsRecipeActivity : AppCompatActivity(), OnMapReadyCallback {
         val marker = MarkerOptions().position(coordinate).title(nameRecipe)
         map.addMarker(marker)
         map.animateCamera(
-            CameraUpdateFactory.newLatLngZoom(coordinate, 16f), 5000, null
+            CameraUpdateFactory.newLatLngZoom(coordinate, 19f), 5000, null
         )
     }
 }

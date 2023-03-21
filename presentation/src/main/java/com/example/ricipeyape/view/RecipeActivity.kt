@@ -29,7 +29,13 @@ class RecipeActivity : AppCompatActivity() {
         binding = ActivityRecipeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initViewModels()
+        if (connectedValidate()){
+            initViewModels()
+        } else {
+            initViewModelsWithoutConnection()
+        }
+
+        binding.txtConection.isVisible = !connectedValidate()
 
         binding.searchRecipe.addTextChangedListener { nameRecipe ->
             if (connectedValidate()) {
@@ -43,6 +49,17 @@ class RecipeActivity : AppCompatActivity() {
 
     }
 
+    private fun initViewModelsWithoutConnection() {
+        recipeViewModel.withoutConnection()
+        recipeViewModel.recipeList.observe(this, Observer {
+            listRecipe = it
+            initRecyclerView()
+        })
+        recipeViewModel.isLoading.observe(this, Observer {
+            binding.progress.isVisible = it
+        })
+    }
+
     private fun connectedValidate() : Boolean {
         val cm = this.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork = cm.activeNetworkInfo
@@ -51,8 +68,8 @@ class RecipeActivity : AppCompatActivity() {
     }
 
     private fun viewEmptyList(empty: Boolean){
-       /* binding.imgEmpty.isVisible = empty
-        binding.txtEmpty.isVisible = empty*/
+        binding.imgEmpty.isVisible = empty
+        binding.txtEmpty.isVisible = empty
 
     }
 
@@ -69,7 +86,7 @@ class RecipeActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
 
-        //viewEmptyList(listUsers.isEmpty())
+        viewEmptyList(listRecipe.isEmpty())
         adapter = RecipeAdapter(listRecipe) { recipeItem -> onItemSelected(recipeItem) }
         binding.rcvRecipe.layoutManager = LinearLayoutManager(this)
         binding.rcvRecipe.adapter = adapter
