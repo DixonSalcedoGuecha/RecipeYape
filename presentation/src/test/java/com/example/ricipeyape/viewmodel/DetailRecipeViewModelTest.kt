@@ -3,7 +3,7 @@ package com.example.ricipeyape.viewmodel
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.domain.model.IngredientsItems
 import com.example.domain.model.SummaryItems
-import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
+import com.example.infrastructure.usescases.GetIngredientsRecipesUseCase
 import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
@@ -22,7 +22,7 @@ import org.junit.Test
 @ExperimentalCoroutinesApi
 class DetailRecipeViewModelTest{
     @RelaxedMockK
-    private lateinit var getDetailsRecipesUseCase: GetDetailsRecipesUseCase
+    private lateinit var getIngredientsRecipesUseCase: GetIngredientsRecipesUseCase
 
     @RelaxedMockK
     private lateinit var  getSummaryRecipesUseCase: GetSummaryRecipesUseCase
@@ -35,7 +35,7 @@ class DetailRecipeViewModelTest{
     @Before
     fun onBefore() {
         MockKAnnotations.init(this)
-        detailRecipeViewModel = DetailRecipeViewModel(getDetailsRecipesUseCase, getSummaryRecipesUseCase)
+        detailRecipeViewModel = DetailRecipeViewModel(getIngredientsRecipesUseCase, getSummaryRecipesUseCase)
         Dispatchers.setMain(Dispatchers.Unconfined)
     }
 
@@ -61,7 +61,7 @@ class DetailRecipeViewModelTest{
                 )
             )
 
-            coEvery { getDetailsRecipesUseCase(1) } returns ingredientList
+            coEvery { getIngredientsRecipesUseCase(1) } returns ingredientList
 
             //When
             detailRecipeViewModel.onCreate(1)

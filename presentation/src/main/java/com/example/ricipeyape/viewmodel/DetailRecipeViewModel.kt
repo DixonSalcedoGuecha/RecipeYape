@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.domain.model.IngredientsItems
-import com.example.infrastructure.usescases.GetDetailsRecipesUseCase
+import com.example.infrastructure.usescases.GetIngredientsRecipesUseCase
 import com.example.infrastructure.usescases.GetSummaryRecipesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DetailRecipeViewModel @Inject constructor(
-    var getDetailsRecipesUseCase: GetDetailsRecipesUseCase,
+    var getIngredientsRecipesUseCase: GetIngredientsRecipesUseCase,
     var getSummaryRecipesUseCase: GetSummaryRecipesUseCase
 ) : ViewModel() {
 
@@ -25,7 +25,7 @@ class DetailRecipeViewModel @Inject constructor(
     fun onCreate(id: Int){
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getDetailsRecipesUseCase(id)
+            val result = getIngredientsRecipesUseCase(id)
             if (result.isNotEmpty()){
                 recipeList.postValue(result)
                 isLoading.postValue(false)
