@@ -3,8 +3,8 @@ package com.example.ricipeyape.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Html
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
@@ -82,7 +82,8 @@ class DetailRecipeActivity : AppCompatActivity() {
         })
         detailViewModel.summaryRecipe.observe(this, Observer {
             summary = it.toString()
-            binding.summaryRecipe.text = summary
+
+            binding.summaryRecipe.text = Html.fromHtml(summary)
         })
         detailViewModel.isLoading.observe(this, Observer {
             binding.progress.isVisible = it

@@ -65,8 +65,6 @@ Uinfrastructure/src/main/java/com/example/infrastructure/data/model/SummaryRespo
 ]infrastructure/src/main/java/com/example/infrastructure/repository/SummaryRecipeRepository.kt,c\7\c77a203aafaad03369e84aa559ebb05c83723021
 j
 :domain/src/main/java/com/example/domain/utils/Constants.kt,e\1\e1896bea7391dfb9dd07ad50d84aab6bcfb54fad
-~
-Npresentation/src/main/java/com/example/ricipeyape/view/DetailRecipeActivity.kt,3\c\3c0f279da9345b727b08b20f8cc9ff36994ce95a
 Y
 )presentation/src/main/AndroidManifest.xml,f\f\ff448c8b12f3de1e58a75bb9abe0b8d4396181d5
 I
@@ -75,8 +73,6 @@ K
 infrastructure/build.gradle,d\0\d08ad7275ca05d13cb570f6f624eee8075619a60
 ƒ
 Spresentation/src/androidTest/java/com/example/ricipeyape/view/RecipeActivityTest.kt,0\c\0c54648942b38e94ccb2036082f998efae45f5dc
-„
-Tpresentation/src/main/java/com/example/ricipeyape/viewmodel/DetailRecipeViewModel.kt,c\9\c9b1199f74de4eafd37fcc11baa3d137b76d2959
 ˆ
 Xpresentation/src/test/java/com/example/ricipeyape/viewmodel/DetailRecipeViewModelTest.kt,7\d\7d62b1d09cfdddcf0f2aeef7dfdb4f414a83ec91
 9
