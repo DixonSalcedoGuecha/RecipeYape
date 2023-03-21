@@ -65,13 +65,7 @@ j
 :domain/src/main/java/com/example/domain/utils/Constants.kt,e\1\e1896bea7391dfb9dd07ad50d84aab6bcfb54fad
 Y
 )presentation/src/main/AndroidManifest.xml,f\f\ff448c8b12f3de1e58a75bb9abe0b8d4396181d5
-I
-presentation/build.gradle,2\9\29ca4091f3fd866a7d8488b04776c5994c7983b9
 K
 infrastructure/build.gradle,d\0\d08ad7275ca05d13cb570f6f624eee8075619a60
-ƒ
-Spresentation/src/androidTest/java/com/example/ricipeyape/view/RecipeActivityTest.kt,0\c\0c54648942b38e94ccb2036082f998efae45f5dc
-ˆ
-Xpresentation/src/test/java/com/example/ricipeyape/viewmodel/DetailRecipeViewModelTest.kt,7\d\7d62b1d09cfdddcf0f2aeef7dfdb4f414a83ec91
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

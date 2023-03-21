@@ -95,7 +95,6 @@ class DetailRecipeActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
 
-        //viewEmptyList(listUsers.isEmpty())
         adapter = IngredientRecipeAdapter(listIngredients)
         binding.rcvIngredients.layoutManager = LinearLayoutManager(this)
         binding.rcvIngredients.adapter = adapter
